@@ -34,26 +34,30 @@
                 <img class="img-logo" src="./Assets/img/logo/icon.png">
                 <span class="navbar-brand">SPECTRUM SYNC</span>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+                aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="material-icons-outlined navbar-toggler-icon">menu</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse nav-menu" id="nav-menu">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">PRINCIPAL</a>
+                        <a class="nav-link active" href="#home">PRINCIPAL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">SPECTRUM</a>
+                        <a class="nav-link" href="#spectrum">SPECTRUM</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EQUIPE</a>
+                        <a class="nav-link" href="#integrantes">EQUIPE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PROJETO</a>
+                        <a class="nav-link" href="#project">PROJETO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTATO</a>
+                        <a class="nav-link" href="#contato">CONTATO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color" onclick="change()"><span id="changeIcon"
+                                class="material-icons-outlined">brightness_5</span></a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +66,7 @@
 
     <div class="box">
         <!-- home -->
-        <div class="home">
+        <section class="home" id="home">
             <div class="container-fluid">
                 <div class="row gx-5 align-items-center">
                     <div class="col" style="display: flex; align-items: center; justify-content: center;">
@@ -71,7 +75,7 @@
                     <div class="col">
                         <div class="box-text">
                             <span class="title-1">technology company</span>
-                            <h1 class="title-principal">SPECTRUM <span style="color: var(--gold);">SYNC</span></h1>
+                            <h1 class="title-principal">SPECTRUM <span class="multi-colors">SYNC</span></h1>
                             <p class="descricao"> Empresa de tecnologia especializada no desenvolvimento de sistemas
                                 personalizados. Nossa
                                 equipe
@@ -99,11 +103,11 @@
                     <span>© 2024 winyc</span>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- spectrum -->
 
-        <div class="spectrum">
+        <section class="spectrum" id="spectrum">
             <div class="page" style="border-bottom: 1px solid var(--gold)">
                 <h1>Principais <span style="color: var(--gold);">características</span></h1>
             </div>
@@ -151,10 +155,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- integrantes -->
-        <div class="integrantes">
+        <section class="integrantes" id="integrantes">
             <div class="page" style="border-bottom: 1px solid var(--red)">
                 <h1><span style="color: var(--red);">INTEGRANTES</span> DA SPECTRUM</h1>
             </div>
@@ -269,10 +273,10 @@
                 <div class="swiper-button-prev swiper-navBtn"></div>
                 <div class="swiper-pagination"></div>
             </div>
-        </div>
+        </section>
 
         <!-- Projeto -->
-        <div class="project">
+        <section class="project" id="project">
             <div class="page" style="border-bottom: 1px solid var(--purple)">
                 <h1>PROJETO <span style="color: var(--purple);">ACADEMY</span></h1>
             </div>
@@ -309,10 +313,10 @@
 
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- contato -->
-        <div class="contato">
+        <section class="contato" id="contato">
             <div class="page"
                 style="border-bottom: 1px solid; border-image: linear-gradient(to right, #F17279, #F79B65) 1;">
                 <h1>Estamos à <span class="gradiant">disposição para atendê-lo</span></h1>
@@ -393,7 +397,7 @@
                     <span>© 2024 winyc</span>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
 

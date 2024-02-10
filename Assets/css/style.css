@@ -13,6 +13,7 @@
     --gold: #F79B65;
     --red: #F17279;
     --white: #F6F6F6;
+    --textGray: rgba(255, 255, 255, .55);
 
 
 
@@ -21,6 +22,19 @@
     --textSecundario: 'Noto Serif', serif;
 }
 
+.white {
+
+    --purple: #6A173D;
+    --gray: #f6f6f6;
+    --background: white;
+    --pink: #FO4393;
+    --gold: #F79B65;
+    --red: #F17279;
+    --white: #0f0f0f;
+    --textGray: rgba(0, 0, 0, 0.55);
+
+    transition: 1.5s all;
+}
 
 * {
 
@@ -84,6 +98,22 @@ body {
     font-weight: 300;
     padding-bottom: 0;
     color: var(--white);
+    animation: fonts 7s ease-in-out infinite;
+}
+
+@keyframes fonts {
+
+    0% {
+        color: var(--gold);
+    }
+
+    50% {
+        color: var(--purple);
+    }
+
+    100% {
+        color: var(--red);
+    }
 }
 
 .container-fluid .img-logo {
@@ -102,9 +132,33 @@ body {
     gap: 30px;
 }
 
+.navbar-dark .navbar-toggler {
+    border-color: var(--textGray) !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: none !important;
+    color: var(--textGray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav-item .nav-link {
 
+    color: var(--textGray) !important;
     font-size: 0.9rem;
+}
+
+.nav-item .color {
+
+    transition: 0.5s linear
+}
+
+
+.nav-item .color .material-icons-outlined:hover {
+
+    color: var(--gold);
 }
 
 .nav-item .nav-link.active {
@@ -143,7 +197,21 @@ body {
 .home .container-fluid img {
 
     width: 400px;
+    animation: float 5s ease-in-out infinite;
 }
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translatey(0)
+    }
+
+    50% {
+        transform: translatey(-20px)
+    }
+}
+
 
 .home .box-text .title-1 {
 
@@ -156,6 +224,14 @@ body {
     overflow: hidden;
     color: var(--white);
 }
+
+.home .box-text .title-principal .multi-colors {
+
+    overflow: hidden;
+    color: var(--white);
+    animation: fonts 7s ease-in-out infinite;
+}
+
 
 .home .box-text .descricao {
 
@@ -233,7 +309,7 @@ body {
 .contato .footer .info span {
 
     text-decoration: none;
-    color: var(--white);
+    color: var(--textGray);
     filter: brightness(60%);
     transition: 0.5s linear;
 }
@@ -300,7 +376,7 @@ body {
 
 .spectrum .container .row .card:hover {
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--textGray);
 
 }
 
@@ -695,7 +771,7 @@ body {
 }
 
 
-@media (max-width: 451px) {
+@media (max-width: 460px) {
 
     .page h1 {
 
@@ -711,5 +787,24 @@ body {
     .project .box-text .tags {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contato .box {
+
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 10px !important;
+    }
+
+    .navbar .container-fluid {
+
+        padding-right: 0;
+        padding-left: 0;
+
     }
 }

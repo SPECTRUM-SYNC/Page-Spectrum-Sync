@@ -1,14 +1,15 @@
 /* principal */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-/*Secundario */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
 
+/*Secundario */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
 
     --purple: #6A173D;
     --gray: #252525;
     --background: #0f0f0f;
+    --color-light: #4c4954;
     --pink: #FO4393;
     --gold: #F79B65;
     --red: #F17279;
@@ -19,7 +20,7 @@
 
     /* Fontes */
     --textPrincipal: 'Poppins', sans-serif;
-    --textSecundario: 'Noto Serif', serif;
+    --textSecundario: "Roboto", sans-serif;
 }
 
 .white {
@@ -27,13 +28,12 @@
     --purple: #6A173D;
     --gray: #f6f6f6;
     --background: white;
+    --color-light: #e7e4f1;
     --pink: #FO4393;
     --gold: #F79B65;
     --red: #F17279;
     --white: #0f0f0f;
     --textGray: rgba(0, 0, 0, 0.55);
-
-    transition: 1.5s all;
 }
 
 * {
@@ -73,11 +73,18 @@ h1 {
     text-transform: uppercase;
 }
 
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
 body {
 
     width: 100%;
     height: 100%;
     background: var(--background);
+    transition: 1.5s all;
 }
 
 .box {
@@ -708,7 +715,114 @@ body {
 
     color: var(--red);
     background: none;
+    display: contents;
 }
+
+
+/* Accessibility */
+
+.custom {
+    border-radius: 1.25rem;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.customize-theme {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    place-items: center;
+    font-size: .875rem;
+}
+
+.customize-theme .card {
+    background: var(--gray);
+    padding: 2rem;
+    border-radius: 1.25rem;
+    max-width: 600px;
+    color: var(--white);
+}
+
+.customize-theme .font-size {
+    margin-top: 2.5rem;
+}
+
+.customize-theme .font-size>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-light);
+    padding: .6rem 1rem;
+    border-radius: 1.25rem;
+}
+
+.customize-theme .choose-size {
+    background: hsl(357, 82%, 90%);
+    height: 0.35rem;
+    width: 100%;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customize-theme .choose-size span {
+    width: 1rem;
+    height: 1rem;
+    background: hsl(357, 82%, 90%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.customize-theme .choose-size span.active {
+    background: var(--gold);
+}
+
+.customize-theme .background {
+    margin-top: 2rem;
+}
+
+.customize-theme .choose-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .6rem;
+}
+
+.customize-theme .choose-bg>div {
+    padding: 0.8rem 0.20rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.customize-theme .choose-bg>div.active {
+    border: 2px solid var(--gold);
+}
+
+.customize-theme .choose-bg .bg-1 {
+    background: hsl(252, 30%, 92%);
+    color: hsl(252, 30%, 17%);
+}
+
+.customize-theme .choose-bg .bg-2 {
+    background: hsl(252, 30%, 10%);
+    color: #fff;
+}
+
+.customize-theme .choose-bg>div span {
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid var(--gray);
+    border-radius: 50%;
+}
+
 
 /* media  */
 

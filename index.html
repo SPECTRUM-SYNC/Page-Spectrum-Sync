@@ -56,8 +56,8 @@
                         <a class="nav-link" href="#contato">CONTATO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color" onclick="change()"><span id="changeIcon"
-                                class="material-icons-outlined">brightness_5</span></a>
+                        <a class="nav-link color" data-bs-toggle="modal" data-bs-target="#AccessibilityModal"><span
+                                class="material-icons-outlined">accessibility</span></a>
                     </li>
                 </ul>
             </div>
@@ -411,6 +411,68 @@
         </section>
     </div>
 
+    <!-- Modal accessibility -->
+    <div class="modal" id="AccessibilityModal" style="background: rgba(0, 0, 0, 0.6);"
+        aria-labelledby="AccessibilityModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content custom">
+                <div class="customize-theme">
+                    <div class="card">
+                        <h2>Personalize o site conforme desejar</h2>
+                        <p>Selecione a fonte, contraste e fundo que melhor se adequem a você.</p>
+                        <!-- font size -->
+                        <div class="font-size">
+                            <h3>Tamanho da fonte</h3>
+                            <div>
+                                <h6>Aa</h6>
+                                <div class="choose-size">
+                                    <span class="font-size-1"></span>
+                                    <span class="font-size-2 active"></span>
+                                    <span class="font-size-3"></span>
+                                </div>
+                                <h3>Aa</h3>
+                            </div>
+                        </div>
+                        <!-- color -->
+                        <div class="font-size">
+                            <h3>Contraste</h3>
+                            <div>
+                                <h4>0.5</h4>
+                                <div class="choose-size">
+                                    <span class="font-size-1"></span>
+                                    <span class="font-size-2 active"></span>
+                                    <span class="font-size-3"></span>
+                                </div>
+                                <h4>1.5</h4>
+                            </div>
+                        </div>
+                        <!-- background -->
+                        <div class="background">
+                            <h3>Cor de fundo</h3>
+                            <div class="choose-bg">
+                                <div class="bg-1" onclick="trocarBack('white')">
+                                    <span></span>
+                                    <h5 for="bg-1">Claro</h5>
+                                </div>
+                                <div class="bg-2 active" onclick="trocarBack('dark')">
+                                    <span></span>
+                                    <h5 for="bg-2">Escuro</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vlibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
     <!-- Swiper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
@@ -422,9 +484,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
 
     <!-- link js -->
     <script src="./Assets/js/main.js"></script>
+    <script src="./Assets/js/accessibility.js"></script>
 </body>
 
 </html>

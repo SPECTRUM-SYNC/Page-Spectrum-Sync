@@ -2,20 +2,18 @@
 new window.VLibras.Widget('https://vlibras.gov.br/app');
 
 // Abrir modal
-const theme = document.querySelector("#theme-button");
+const themeModal = document.querySelector(".customize-theme");
+const modal = new bootstrap.Modal(document.getElementById('modalAccessibility'));
 
 
-const openThemeModal = () => {
-    themeModal.style.display = 'grid';
-}
 // close modal
 const closeThemeModal = (e) => {
     if (e.target.classList.contains('customize-theme')) {
-        themeModal.style.display = 'none';
+        modal.hide()
     }
 }
-theme.addEventListener("click", openThemeModal);
 themeModal.addEventListener("click", closeThemeModal);
+
 
 //Trocar cor de fundo
 // true == preto e false == branco
@@ -67,7 +65,7 @@ fontSizes.forEach(size => {
             fontSize = '16px';
         }
         else if (size.classList.contains('font-size-3')) {
-            fontSize = '18px';
+            fontSize = '19px';
         }
 
         // change font size of the root html element 

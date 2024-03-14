@@ -34,10 +34,15 @@
                 <img class="img-logo" alt="logo da empresa" src="./Assets/img/logo/icon.png">
                 <span class="navbar-brand">SPECTRUM SYNC</span>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
-                aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="material-icons-outlined navbar-toggler-icon">menu</span>
-            </button>
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
+                    aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="material-icons-outlined navbar-toggler-icon">menu</span>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="modal"
+                    data-bs-target="#modalAccessibility"><span
+                        class="material-icons-outlined navbar-toggler-icon">accessibility</span></button>
+            </div>
             <div class="collapse navbar-collapse nav-menu" id="nav-menu">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -56,13 +61,14 @@
                         <a class="nav-link" href="#contato">CONTATO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color" data-bs-toggle="modal" data-bs-target="#AccessibilityModal"><span
+                        <a class="nav-link color" data-bs-toggle="modal" data-bs-target="#modalAccessibility"><span
                                 class="material-icons-outlined">accessibility</span></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
     <div class="box">
         <!-- home -->
@@ -423,56 +429,64 @@
         </section>
     </div>
 
-    <!-- Modal accessibility -->
-    <div class="customize-theme">
-        <div class="card">
-            <h2>Personalize o site conforme desejar</h2>
-            <p>Selecione a fonte, contraste e fundo que melhor se adequem a você.</p>
-            <!-- font size -->
-            <div class="font-size">
-                <h3>Tamanho da fonte</h3>
-                <div>
-                    <h6>Aa</h6>
-                    <div class="choose-size" id="font-size">
-                        <span class="font-size-1"></span>
-                        <span class="font-size-2 active"></span>
-                        <span class="font-size-3"></span>
-                    </div>
-                    <h3>Aa</h3>
-                </div>
-            </div>
-            <!-- color -->
-            <div class="font-size">
-                <h3>Contraste</h3>
-                <div>
-                    <h5 data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Baixo contraste">BC</h5>
-                    <div class="choose-size">
-                        <span class="font-size-1"></span>
-                        <span class="font-size-2 active"></span>
-                        <span class="font-size-3"></span>
-                    </div>
-                    <h5 data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                        data-bs-title="Alto contraste">AC</h5>
-                </div>
-            </div>
-            <!-- background -->
-            <div class="background">
-                <h3>Cor de fundo</h3>
-                <div class="choose-bg">
-                    <div class="bg-1" onclick="trocarBack('white')">
-                        <span></span>
-                        <h5 for="bg-1">Claro</h5>
-                    </div>
-                    <div class="bg-2 active" onclick="trocarBack('dark')">
-                        <span></span>
-                        <h5 for="bg-2">Escuro</h5>
+
+    <!-- Modal -->
+    <div class="modal" id="modalAccessibility" tabindex="-1" aria-labelledby="modalAccessibilityLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content custom">
+                <!-- Modal accessibility -->
+                <div class="customize-theme">
+                    <div class="card">
+                        <h2>Personalize o site conforme desejar</h2>
+                        <p>Selecione a fonte, contraste e fundo que melhor se adequem a você.</p>
+                        <!-- font size -->
+                        <div class="font-size">
+                            <h3>Tamanho da fonte</h3>
+                            <div>
+                                <h6>Aa</h6>
+                                <div class="choose-size" id="font-size">
+                                    <span class="font-size-1"></span>
+                                    <span class="font-size-2 active"></span>
+                                    <span class="font-size-3"></span>
+                                </div>
+                                <h3>Aa</h3>
+                            </div>
+                        </div>
+                        <!-- color -->
+                        <div class="font-size">
+                            <h3>Contraste</h3>
+                            <div>
+                                <h5 data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" data-bs-title="Baixo contraste">BC</h5>
+                                <div class="choose-size" id="constraste-size">
+                                    <span class="font-size-1"></span>
+                                    <span class="font-size-2 option"></span>
+                                    <span class="font-size-3"></span>
+                                </div>
+                                <h5 data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" data-bs-title="Alto contraste">AC</h5>
+                            </div>
+                        </div>
+                        <!-- background -->
+                        <div class="background">
+                            <h3>Cor de fundo</h3>
+                            <div class="choose-bg">
+                                <div class="bg-1" onclick="trocarBack('white')">
+                                    <span></span>
+                                    <h5 for="bg-1">Claro</h5>
+                                </div>
+                                <div class="bg-2 active" onclick="trocarBack('dark')">
+                                    <span></span>
+                                    <h5 for="bg-2">Escuro</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Vlibras -->
     <div vw class="enabled">

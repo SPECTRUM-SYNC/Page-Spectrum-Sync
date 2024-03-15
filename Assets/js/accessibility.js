@@ -46,7 +46,6 @@ function trocarBack(fundoAtual) {
 const fontSizes = document.querySelectorAll('#font-size span');
 
 
-//remove active class from spans or font size selectors
 const removeSizeSelector = () => {
     fontSizes.forEach(size => {
         size.classList.remove("active");
@@ -68,8 +67,37 @@ fontSizes.forEach(size => {
             fontSize = '19px';
         }
 
-        // change font size of the root html element 
         document.querySelector('html').style.fontSize = fontSize;
-
     })
 })
+
+/*===== Constraste =====*/
+const ConstrastSizes = document.querySelectorAll('#constraste-size span');
+
+
+const removeConsSelector = () => {
+    ConstrastSizes.forEach(size => {
+        size.classList.remove("option");
+    })
+}
+ConstrastSizes.forEach(size => {
+    size.addEventListener('click', () => {
+
+        removeConsSelector();
+        let constrasteSize;
+        size.classList.toggle('option');
+        if (size.classList.contains('font-size-1')) {
+            document.querySelector('html').style.filter = 'invert(1)';
+        }
+        else if (size.classList.contains('font-size-2')) {
+            constrasteSize = '1.0';
+        }
+        else if (size.classList.contains('font-size-3')) {
+            constrasteSize = '1.5';
+        }
+
+        document.querySelector('html').style.filter = 'contrast(' + constrasteSize + ')';
+    })
+})
+
+

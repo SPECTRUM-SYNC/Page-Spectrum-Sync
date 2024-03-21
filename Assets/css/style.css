@@ -206,7 +206,7 @@ body {
 .integrantes,
 .project {
 
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .home .container-fluid,
@@ -988,10 +988,6 @@ h6 {
         flex-direction: column;
     }
 
-    .spectrum .container .row .card {
-        height: 20rem;
-        text-align: justify;
-    }
 
     .home .container-fluid img {
 

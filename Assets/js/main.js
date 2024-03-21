@@ -50,7 +50,7 @@ function highlightNavigation() {
 
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 500;
+        const sectionTop = section.offsetTop - 300;
 
         const sectionId = section.getAttribute("id");
 
